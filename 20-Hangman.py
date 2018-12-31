@@ -1,9 +1,9 @@
-name = input("Name: ")
+name = input("Enter name: ")
 print("Hello " + name + " time to play hangman!")
 
 secret_word = "Metallica"
 
-guesses = ""
+guess_string = ""
 
 lives = 10
 
@@ -13,7 +13,7 @@ while lives > 0:
 
 	for character in secret_word:
 
-		if character in guesses:
+		if character in guess_string:
 
 			print(character)
 		else:
@@ -26,7 +26,7 @@ while lives > 0:
 
 
 	guess = input("Guess a word: ")
-	guesses += guess
+	guess_string += guess
 
 	if guess not in secret_word:
 		lives -= 1
